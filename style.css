@@ -1,0 +1,74 @@
+.feature-container {
+  display: flex;
+  justify-content: space-around;
+}
+.feature.hover {
+  background-color: #f0f0f0;
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon-description {
+  display: flex;
+  align-items: center;
+  font-size: 30px;
+  margin-left: 20px;
+}
+
+.icon {
+  flex: 0 0 auto;
+  margin-right: 20px;
+}
+
+.description {
+  flex: 1;
+  margin-right: 30px;
+}
+.description p {
+  margin-right: 30px;
+}
+
+.icon img {
+  width: 200px;
+  height: 200px;
+}
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-inner {
+  display: flex;
+  width: calc(100% * (number of features / 2));
+  transition: transform 0.3s ease-in-out;
+}
+
+.feature {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: unset;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  font-size: 30px;
+  background-color: #b9b9b933;
+  border-radius: 100%;
+}
+
+.prev {
+  left: 10px;
+}
+.next {
+  right: 10px;
+}
