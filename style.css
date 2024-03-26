@@ -7,34 +7,21 @@
 }
 
 .feature {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.feature {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.icon-description {
-  display: flex;
-  align-items: center;
-  font-size: 30px;
-  margin-left: 20px;
-}
-
-.icon {
-  flex: 0 0 auto;
-  margin-right: 20px;
-}
-
-.description {
-  flex: 1;
-  margin-right: 30px;
-}
-.description p {
-  margin-right: 30px;
-}
-
-.icon img {
-  width: 200px;
-  height: 200px;
+.img_benefit {
+  width: 700px;
+  height: 300px;
+  object-fit: contain;
+  border-radius: 10%;
 }
 
 .carousel {
@@ -48,27 +35,48 @@
   transition: transform 0.3s ease-in-out;
 }
 
-.feature {
-  flex: 0 0 50%;
-  max-width: 50%;
-}
-.prev,
-.next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: unset;
-  padding: 10px 15px;
-  border: none;
-  cursor: pointer;
-  font-size: 30px;
-  background-color: #b9b9b933;
-  border-radius: 100%;
+.carousel-dots {
+  text-align: center;
+  padding-top: 20px;
 }
 
-.prev {
-  left: 10px;
+.dot {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  cursor: pointer;
 }
-.next {
-  right: 10px;
+
+.dot.active {
+  background-color: #717171;
+}
+
+@media (max-width: 1439px) {
+  .img_benefit {
+    width: 700px;
+    height: auto;
+  }
+
+  .carousel-inner {
+    width: calc(100% * number of features);
+  }
+}
+
+@media (max-width: 939px) {
+  .feature {
+    margin-right: 5px;
+  }
+
+  .img_benefit {
+    width: 100%;
+    height: auto;
+    border-radius: 10%;
+  }
+  .dot {
+    width: 10px;
+    height: 10px;
+  }
 }
